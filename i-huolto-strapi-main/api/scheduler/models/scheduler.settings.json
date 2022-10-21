@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "schedulers",
+  "info": {
+    "name": "Scheduler",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "KEY": {
+      "type": "string",
+      "unique": true
+    },
+    "token": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "company_id": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "book_url": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "API_KEY": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

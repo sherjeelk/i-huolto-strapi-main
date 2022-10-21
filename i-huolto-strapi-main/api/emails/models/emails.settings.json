@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "emails",
+  "info": {
+    "name": "Emails"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject": {
+      "type": "string"
+    },
+    "html": {
+      "type": "richtext"
+    },
+    "text": {
+      "type": "string"
+    },
+    "trigger": {
+      "type": "enumeration",
+      "enum": [
+        "ORDER_PLACE",
+        "ORDER_RECEIVED"
+      ]
+    }
+  }
+}

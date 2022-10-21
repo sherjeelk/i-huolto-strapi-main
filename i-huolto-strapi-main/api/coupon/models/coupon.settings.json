@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coupons",
+  "info": {
+    "name": "coupon",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "coupon": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 3
+    },
+    "desc": {
+      "type": "string"
+    },
+    "discount": {
+      "type": "decimal"
+    },
+    "type": {
+      "type": "string"
+    },
+    "expiry": {
+      "type": "datetime"
+    },
+    "used": {
+      "type": "integer"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

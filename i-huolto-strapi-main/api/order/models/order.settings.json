@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "Order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "f_name": {
+      "type": "string"
+    },
+    "l_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "street_building": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "area": {
+      "type": "integer"
+    },
+    "service": {
+      "type": "string"
+    },
+    "contactMe": {
+      "type": "boolean"
+    },
+    "products": {
+      "collection": "products"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "subService": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

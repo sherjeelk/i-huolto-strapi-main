@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CSS only -->
+
+  <title>Email</title>
+
+</head>
+<body>
+<div>
+  <div style="text-align: center; margin-top: 53px; margin-bottom: 35px;">
+    <img
+      style="width: 10%; box-shadow: 1px 1px 14px #0000002e; border-radius: 50%;"
+      class="" src="http://lympo-api.litcode.io/uploads/ly_logo_809bc3284b.png"
+      alt="">
+  </div>
+
+  <div>
+    <h1 style="text-align: center">Order Receipt</h1>
+    <p style="text-align: center; color: #757575">Order Id {{ id }}</p>
+  </div>
+  <div>
+    <table style="margin: 20px auto">
+      <tr>
+        <th style="padding: 0 35px;">Name</th>
+        <th style="padding: 0 35px;">Email</th>
+        <th style="padding: 0 35px;">Address</th>
+      </tr>
+      <tr>
+        <td style="padding: 0 35px;">{{ f_name }} {{ l_name }} </td>
+        <td style="padding: 0 35px;"> {{ email }} </td>
+        <td style="padding: 0 35px;"> {{ address }}</td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div>
+    <h4 style="text-align: center; margin: 10px 0">Product</h4>
+    <table style="margin: 20px auto">
+      <tr>
+        <th style="padding: 0 35px;">Name</th>
+        <th style="padding: 0 35px;">Price</th>
+        <th style="padding: 0 35px;">Image</th>
+      </tr>
+      <tr>
+        {{#each product}}
+        <td style="padding: 0 35px;">{{name}}</td>
+        <td style="padding: 0 35px;">{{price}}</td>
+        <td style="padding: 0 35px;"><img src="http://lympo-api.litcode.io{{ image.url }}" alt=""></td>
+
+        {{/each}}
+      </tr>
+    </table>
+  </div>
+  <div>
+    <table style="margin: 20px auto">
+      <tr>
+        <th style="padding: 0 35px;"></th>
+        <th style="padding: 0 35px;"></th>
+        <th style="padding: 0 35px; text-align: end">Total</th>
+      </tr>
+      <tr>
+        <td style="padding: 0 35px;"></td>
+        <td style="padding: 0 35px;"></td>
+        <td style="padding: 0 35px; text-align: end"> {{ total }}</td>
+      </tr>
+
+    </table>
+  </div>
+  <div>
+
+  </div>
+</div>
+<footer style="background-color: black">
+  <div style="text-align: center">
+    <img src="http://lympo-api.litcode.io/uploads/lampo_logo_4b53f229c2.png"
+         alt="">
+  </div>
+</footer>
+</body>
+</html>
